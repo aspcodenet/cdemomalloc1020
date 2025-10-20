@@ -6,9 +6,17 @@ typedef struct {
 }Player;
 
 void printMenu(){
-    printf("1. Skapa ny");
-    printf("2. Lista alla");
-    printf("3. Exit");
+    printf("1. Skapa ny\n");
+    printf("2. Lista alla\n");
+    printf("3. Exit\n");
+}
+
+void createNew(Player *newPlayer){
+    printf("Skapa ny\n************************\n");
+    printf("Name:");
+    scanf(" %s",newPlayer->name); // mellanslag + buffer overflow fel + 
+    printf("Jersey:");
+    scanf(" %d",&newPlayer->jersey); // om error = ingen clear
 }
 
 
@@ -20,13 +28,14 @@ int main(){
         scanf(" %d", &selection);
         switch(selection){
             case 1:
-                printf("Ny");
+                Player player;
+                createNew(&player);
                 break;
             case 2:
                 printf("Lista alla");
                 break;
             case 3:
-                return;
+                return 0;
         }
 
     }
