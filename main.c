@@ -57,6 +57,37 @@ typedef struct{
 } PLAYERLIST;
 
 
+
+void ArraysAverage(){
+    int num;
+    printf("Hur många:");
+    scanf(" %d", &num);
+    int *arr = (int *)malloc(num*sizeof(int));
+    //int *arr = malloc(num*sizeof(int));
+    //Player *arr = malloc(num*sizeof(int));
+    //int arr[num]; // STATISK
+
+
+
+    for(int i = 0; i < num;i++){
+        printf("Ange tal %d:", i+1);
+        scanf(" %d", &arr[i]);
+    }
+    float sum;
+    for(int i = 0; i < num;i++){
+        sum += arr[i];
+    }
+    printf("Average=%f", sum/num);
+
+
+
+    free(arr);
+
+
+}
+
+
+
 // void adminMenu(){
 //     int bla = 12;
 //     while(){
