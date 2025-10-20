@@ -13,14 +13,37 @@ void printMenu(){
     printf("3. Exit\n");
 }
 
+// typedef enum{
+//   WITHDRAWAL_OK,
+//   WITHDRAWAL_BELOPP_LARGER_THAN_DAILY_AMOUNT, //  
+//   WITHDRAWAL_BELOPP_LARGER_THAN_SALDO,
+//   WITHDRAWAL_BLA
+// } WITHDRAWAL_ERROR;
+
+// WITHDRAWAL_ERROR withDrawal(int amount){ // uttag
+//     // om beloppet > 5000
+//     return WITHDRAWAL_BELOPP_LARGER_THAN_DAILY_AMOUNT;
+//     // om beloppet > saldo 
+//     return WITHDRAWAL_BELOPP_LARGER_THAN_SALDO;
+//     // annars
+//     return WITHDRAWAL_OK;
+// }
+
+
 // input, print
 // API - färdiga funktioner - 
 // avr_gcc Embedded - färdiga funktioner 
 
 void createNew(Player *newPlayer){
+    // if(withDrawal(100) == WITHDRAWAL_BELOPP_LARGER_THAN_DAILY_AMOUNT){
+
+    // }
     // Felhantering - loopa till alla är "ok"
     printf("Skapa ny\n************************\n");
-    GetInput("Name:",newPlayer->name,20);
+    INPUT_RESULT result = GetInput("Name:",newPlayer->name,20);
+    if(result == INPUT_RESULT_OK ){
+        printf("Du får bara skriva in 20 tecken");
+    }
     
     bool successfulInput = GetInputInt("Jersey:",&newPlayer->jersey);
     // printf("Jersey:");
