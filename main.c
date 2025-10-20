@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include "safeinput.h"
 
 typedef struct {
@@ -52,6 +53,27 @@ void createNew(Player *newPlayer){
 
 
 int main(){
+    // FIL = bara för att korten ska vara beständiga!!!
+    // arrayen med kort ska ta upp 0 bytes vid uppstart (innan du läst in filen)
+    //    vid uppstart läsa från filen -> 
+    
+    // när du lägger till ett kort ska det ta upp 1 * sizeof(Player)
+    // när du lägger till ett kort ska det ta upp 2 * sizeof(Player)
+    // Den ska kunna växa!
+
+    int age;
+//    Player allPlayers[10]; // ALLOKERAD PÅ STACKEN - 10 * sizeof(Player)
+//    allPlayers[111] = 
+    //Player allPlayers[]; 
+    Player *allPlayers; // pekare till en eller flera Player - odefinierat värde
+    allPlayers = malloc( 10 * sizeof(Player) ); // int  ALLTID bytes!!!
+    // allPlayers arrayen ligger på HEAPEN inte på stacken
+    // Stefan förklarar heap efter rasten
+    // Men den STORA skillnaden är att nu kan allPlayers VÄXA - men fortsätta vara en array (konsekutivt i minnet)
+    // heap kommer at a price
+
+
+    int b;
     while(true){
         printMenu();
         int selection;
@@ -74,3 +96,4 @@ int main(){
 }
 
 
+ 
