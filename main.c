@@ -57,35 +57,35 @@ typedef struct{
 } PLAYERLIST;
 
 
-void adminMenu(){
-    int bla = 12;
-    while(){
-    // skriv ut admin
-    // 1, ta fram rapport
-    // 3. exit
-    int sel;
-    scanf(" %d",&sel);
-    if(sel == 3){
-       return;
-    }
-    }
-}
+// void adminMenu(){
+//     int bla = 12;
+//     while(){
+//     // skriv ut admin
+//     // 1, ta fram rapport
+//     // 3. exit
+//     int sel;
+//     scanf(" %d",&sel);
+//     if(sel == 3){
+//        return;
+//     }
+//     }
+// }
 
 
-void huvudMenu(){
-    int age = 12;
-    while(){
-    // skriv ut huvudmenyn
-    // 1, Admin
-    // 2, Skapa
-    // 3. exit
-    int sel;
-    scanf(" %d",&sel);
-    if(sel == 1){
-        adminMenu();
-    }
-    }
-}
+// void huvudMenu(){
+//     int age = 12;
+//     while(){
+//     // skriv ut huvudmenyn
+//     // 1, Admin
+//     // 2, Skapa
+//     // 3. exit
+//     int sel;
+//     scanf(" %d",&sel);
+//     if(sel == 1){
+//         adminMenu();
+//     }
+//     }
+// }
 
 
 int main(){
